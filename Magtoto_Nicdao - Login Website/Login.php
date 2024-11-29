@@ -66,13 +66,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <div class="remember-forgot">
-                <label for="remember"><input type="checkbox" id="remember">Remember me</label>
-                <a href="#">Forgot Password?</a>
-            </div>
             <button type="submit" class="btn">Login</button>
             <div class="register-link">
-                <p>Not yet registered? <a href="Register.html">Sign Up</a></p>
+                <p>Not yet registered? <a href="Register.php">Sign Up</a></p>
             </div>
         </form>
     </div>

@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validate passwords
     if ($password !== $confirmPassword) {
-        die('Passwords do not match.');
+            echo "<script>alert('Passwords Do Not Match.');</script>";
     }
 
     // Hash the password
@@ -77,13 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="input-box">
                 <label for="birthday">Date of Birth <input type="date" id="date_of_birth" name="date_of_birth" required></label>
             </div><br>
-            <div class="remember-forgot">
-                <label for="remember"><input type="checkbox" id="remember">Remember me</label>
-                <a href="#">Forgot Password?</a>
-            </div>
             <button type="submit" class="btn">Register</button>
             <div class="register-link">
-                <p>Already have an account? <a href="Login.html">Login</a></p>
+                <p>Already have an account? <a href="Login.php">Login</a></p>
             </div>
         </form>
     </div>
