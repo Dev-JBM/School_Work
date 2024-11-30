@@ -1,11 +1,13 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 
 //Variables for Database
 $host = "127.0.0.1";
-$port = 3306;
-$user = "myUser";
-$pass = "JbMagt64";
+$port = 4306;
+$user = "root";
+$pass = "";
 $database = "My_Database";
 
 //Connects to Database
