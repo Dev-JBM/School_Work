@@ -14,41 +14,55 @@ define('MAX_FILE_SIZE', 5 * 1024 * 1024); // 5MB in bytes
 $allowed_types = ['pdf', 'doc', 'docx', 'ppt', 'pptx', 'jpeg', 'jpg', 'png'];
 $target_dir = "uploads/";
 
-// Function to handle file upload
 function handleFileUpload($file) {
     global $allowed_types, $target_dir, $conn;
 
     // Check for file upload errors
-    if ($file['error'] !== 0) {
-        return "Error with file upload.";
+    if ($file['error'] === UPLOAD_ERR_INI_SIZE || $file['error'] === UPLOAD_ERR_FORM_SIZE) {
+        echo "<script>alert('File is too large. Max allowed size is 5MB');</script>";
+        return false; // Stop execution
+    } elseif ($file['error'] !== UPLOAD_ERR_OK) {
+        echo "<script>alert('Error with file upload');</script>";
+        return false; // Stop execution
     }
 
-    // Check if file size is within limits
+    // Check if file size is within limits (for further validation, even if PHP didn't block it)
     if ($file['size'] > MAX_FILE_SIZE) {
-        return "File is too large. Max allowed size is 5MB.";
+        echo "<script>alert('File is too large. Max allowed size is 5MB');</script>";
+        return false; // Stop execution
     }
 
     // Validate file type
     $file_type = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
     if (!in_array($file_type, $allowed_types)) {
-           echo "<script>alert('Invalid file type. Allowed types: pdf, doc, docx, ppt, pptx, jpeg, jpg, png');</script>";
+        echo "<script>alert('Invalid file type. Allowed types: " . implode(", ", $allowed_types) . "');</script>";
+        return false; // Stop execution
     }
 
     // Ensure safe file name
     $target_file = $target_dir . basename($file["name"]);
-    
+
+    // Check if file already exists to avoid overwriting
+    if (file_exists($target_file)) {
+        echo "<script>alert('File already exists. Please rename the file and try again.');</script>";
+        return false; // Stop execution
+    }
+
     // Attempt file upload
     if (!move_uploaded_file($file["tmp_name"], $target_file)) {
-           echo "<script>alert('Error uploading the file');</script>";
+        echo "<script>alert('Error uploading the file');</script>";
+        return false; // Stop execution
     }
 
     // Store file info in the database
     $stmt = $conn->prepare("INSERT INTO files (filename, filesize, filetype) VALUES (?, ?, ?)");
-    $stmt->bind_param("sis", $file["name"], $file["size"], $file["type"]);
+    $stmt->bind_param("sis", $file["name"], $file["size"], $file_type);
     if ($stmt->execute()) {
-           echo "<script>alert('File uploaded and Information stored');</script>";
+        echo "<script>alert('File uploaded and information stored');</script>";
+        return true;
     } else {
-           echo "<script>alert('Error storing file in the database');</script>";
+        echo "<script>alert('Error storing file information in the database');</script>";
+        return false;
     }
 }
 
@@ -147,7 +161,7 @@ if (isset($_POST['delete'])) {
         <div class="upload" id="upload-area">
             <h3>Upload a file</h3>
             <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST" enctype="multipart/form-data">
-                <input type="file" class="form-control" name="file" id="file" required hidden>
+                <input type="file" class="form-control" name="file" id="file" value="5242880" required hidden>
                 <label for="file" id="file-label">
                     <h5>Drag or Choose a file</h5>
                 </label>

@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             VALUES ('$firstName', '$middleName', '$lastName', '$username', '$hashedPassword', '$email', '$dob')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Registration successful!";
+           echo "<script>alert('Registration Successful');</script>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
