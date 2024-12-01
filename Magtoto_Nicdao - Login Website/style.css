@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('WebBG.png') no-repeat;
+    background: url('background.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -39,6 +39,23 @@ body {
         opacity: 1;
         transform: rotateX(0);
     }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    width: 180px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+}
+
+form {
+    margin-top: 20px;
 }
 
 .wrapper h1 {

@@ -56,6 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div class="wrapper">
+        <div class="logo-container">
+            <img src="logo.png" class="logo">
+        </div>
         <form action="Login.php" method="post">
             <h1>Login</h1>
             <div class="input-box">

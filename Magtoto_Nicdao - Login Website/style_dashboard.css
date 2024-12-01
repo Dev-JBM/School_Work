@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+/* --- NAV BAR --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user {
+    margin-left: 30px;
+}
+
+.logo {
+    width: 120px;
+    margin-left: -10px;
+}
+
+/* --- NAV BAR --- */
+
+/* --- OPTIONS --- */
+.profilePic {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 2.5%;
+    width: 320px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-top: none;
+    border-bottom: none;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.75s ease;
+}
+
+.sub-menu-wrap.open-class {
+    max-height: 400px;
+}
+
+.sub-menu {
+    padding: 20px;
+    margin: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.user-info h5 {
+    font-weight: 500;
+}
+
+.user-info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu hr {
+    border: 2px solid rgba(255, 255, 255, .2);
+    height: 1px;
+    width: 100%;
+    background: white;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin: 12px 0;
+}
+
+.sub-menu-link p {
+    width: 100%;
+    text-align: left;
+    margin-bottom: -2.5px;
+}
+
+.sub-menu-link img {
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+    color: white;
+}
+
+.sub-menu-link :hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link :hover p {
+    font-weight: 600;
+}
+
+.container {
+    margin-top: 20px;
+}
+/* --- OPTIONS --- */
+
+
+/* ----- Dashboard.php only ----- */
+/* --- UPLOAD FILES --- */
+.upload {
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.upload.dragover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #007bff;
+}
+
+.upload label {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.upload label:hover {
+    color: #007bff;
+}
+
+.upload input[type="file"] {
+    display: none;
+}
+/* --- UPLOAD FILES --- */
+/* ----- Dashboard.php only ----- */
+
+
+
+/* ----- ProfileInfo.php only ----- */
+/* --- TABLE --- */
+.info-table {
+    width: 500px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 30px;
+    animation: transitionIn 0.75s;
+}
+
+.info-table h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info-table .data-label {
+    text-align: left;
+    padding: 10px;
+    border: none;
+    width: 40%;
+    vertical-align: top;
+}
+
+.info-table .fetched-data {
+    width: 60%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+}
+/* --- TABLE --- */
+/* ----- ProfileInfo.php only ----- */
+
+
+
+
+.finalcont {
+    display: column;
+justify-content: center;
+    align-items: center;
+width: 700px;
+}
+.container h3 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.ui-w-80 {
+    width : 80px !important;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background  : rgba(0, 0, 0, 0);
+    color       : #4E5155;
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    border-color: #26B4FF;
+    background  : transparent;
+    color       : #26B4FF;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.btn-facebook {
+    border-color: rgba(0, 0, 0, 0);
+    background  : #3B5998;
+    color       : #fff;
+}
+
+.btn-instagram {
+    border-color: rgba(0, 0, 0, 0);
+    background  : #000;
+    color       : #fff;
+}
+
+.card {
+    background-clip: padding-box;
+    border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position  : absolute;
+    visibility: hidden;
+    width     : 1px;
+    height    : 1px;
+    opacity   : 0;
+}
+
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+    color: #fff !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #4E5155 !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+
+/* --- LOGOUT --- */
+#alertBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+#alertOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.logoutAlert {
+    color: black;
+}
+/* --- LOGOUT --- */
