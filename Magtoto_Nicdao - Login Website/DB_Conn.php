@@ -9,8 +9,9 @@ $port = 3306;
 $user = "root";
 $pass = "";
 $database = "My_Database";
+$column = "image";
 
 //Connects to Database
-$conn = mysqli_connect($host, $user, $pass, $database, $port);
+$conn = mysqli_connect($host, $user, $pass, $database, $port, $column);
 
 ?>

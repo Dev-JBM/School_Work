@@ -7,6 +7,31 @@ if (session_status() === PHP_SESSION_NONE) {
 // Database connection
 require_once 'DB_Conn.php';
 
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+    echo "You must log in first.";
+    exit();
+}
+
+// --- FOR FETCHING PROFILE PIC --- //
+$username = $_SESSION['username']; // Get the logged-in username
+
+// Prepare the query to fetch the user's data
+$sql = "SELECT image FROM userlog WHERE username = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $imagePath = "user-Img/" . $row['image'];  // Set the image path based on the database value
+} else {
+    echo "No data found for the logged-in user.";
+    exit();
+}
+
+// --- FOR FILE UPLOAD --- //
 // Maximum file size (5MB)
 define('MAX_FILE_SIZE', 5 * 1024 * 1024); // 5MB in bytes
 
@@ -117,12 +142,12 @@ if (isset($_POST['delete'])) {
         <nav>
             <h4 class="user">Welcome,<br><?php echo htmlspecialchars($_SESSION['username']); ?>!</h4>
             <a href="Dashboard.php"><img src="logo.png" class="logo"></a>
-            <img src="noProfile.jpeg" alt="Profile Picture" class="profilePic" onclick="togglemenu()">
+            <img src="<?php echo $imagePath; ?>" alt="Profile Picture" class="profilePic" onclick="togglemenu()">
 
             <div class="sub-menu-wrap" id="sub-menu-wrap">
                 <div class="sub-menu">
                     <div class="user-info">
-                        <img src="noProfile.jpeg" class=" ">
+                        <img src="<?php echo $imagePath; ?>" class=" ">
                         <h5><?php echo htmlspecialchars($_SESSION['username']); ?></h5>
                     </div>
                     <hr>
