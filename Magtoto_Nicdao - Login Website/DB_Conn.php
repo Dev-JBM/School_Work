@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 //Variables for Database
 $host = "127.0.0.1";
-$port = 3306;
+$port = 4306;
 $user = "root";
 $pass = "";
 $database = "My_Database";

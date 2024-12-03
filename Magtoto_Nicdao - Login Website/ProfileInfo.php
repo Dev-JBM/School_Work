@@ -120,6 +120,7 @@ if ($result->num_rows > 0) {
                 <td class="fetched-data"><?php echo htmlspecialchars($row['date_of_birth']); ?></td>
             </tr>
         </table>
+            <button><a href="AccSettings.php">Edit</a></button>
     </div>
 
     <!-- LOGOUT -->
