@@ -14,22 +14,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $dob = mysqli_real_escape_string($conn, $_POST['date_of_birth']);
 
-    // Validate passwords
-    if ($password !== $confirmPassword) {
-            echo "<script>alert('Passwords Do Not Match.');</script>";
-    }
-
-    // Hash the password
-    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-    // Insert data into the database
-    $sql = "INSERT INTO userlog (first_name, middle_name, last_name, username, password, email, date_of_birth) 
-            VALUES ('$firstName', '$middleName', '$lastName', '$username', '$hashedPassword', '$email', '$dob')";
-
-    if (mysqli_query($conn, $sql)) {
-           echo "<script>alert('Registration Successful');</script>";
+    // Validate password length
+    if (strlen($password) < 8) {
+        echo "<script>alert('Password must be at least 8 characters long.');</script>";
+    } 
+    // Validate passwords match
+    else if ($password !== $confirmPassword) {
+        echo "<script>alert('Passwords do not match.');</script>";
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        // Check for duplicate username
+        $checkUsernameQuery = "SELECT * FROM userlog WHERE username = '$username'";
+        $checkUsernameResult = mysqli_query($conn, $checkUsernameQuery);
+
+        if (mysqli_num_rows($checkUsernameResult) > 0) {
+            echo "<script>alert('Username is already taken.');</script>";
+        } else {
+            // Check for duplicate email
+            $checkEmailQuery = "SELECT * FROM userlog WHERE email = '$email'";
+            $checkEmailResult = mysqli_query($conn, $checkEmailQuery);
+
+            if (mysqli_num_rows($checkEmailResult) > 0) {
+                echo "<script>alert('Email is already taken.');</script>";
+            } else {
+                // Hash the password
+                $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+                // Insert data into the database
+                $sql = "INSERT INTO userlog (first_name, middle_name, last_name, username, password, email, date_of_birth) 
+                        VALUES ('$firstName', '$middleName', '$lastName', '$username', '$hashedPassword', '$email', '$dob')";
+
+                if (mysqli_query($conn, $sql)) {
+                    echo "<script>alert('Registration Successful');</script>";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+            }
+        }
     }
 
     // Close the database connection
