@@ -166,7 +166,7 @@ if (isset($_SESSION['username'])) {
                     };
                 </script>
 
-                <?php
+<?php
 include 'DB_Conn.php';
 
 // Check if the form was submitted
@@ -208,7 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["fileImg"]["name"])) 
 
             </form>
             <br>
-            <p>Edit Profile Picture <br> Allowed format: .jpg, .jpeg, .png</p>
+            <p>Edit Profile Picture - Click Camera Icon<br> Allowed format: .jpg, .jpeg, .png</p>
         </div>
 
     </div>
