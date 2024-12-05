@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
-<h5 onclick="window.location.href='ForgotPass.php'">Forgot Password?</h5><br>
+            <h5 onclick="window.location.href='ForgotPass.php'">Forgot Password?</h5><br>
 
             <button type="submit" class="btn">Login</button>
             <div class="register-link">

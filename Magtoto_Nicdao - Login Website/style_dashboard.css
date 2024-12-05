@@ -507,16 +507,16 @@ form {
 left: 15px;
 }
 
-
+.wrapper button:hover, .save-cancel button:hover, .PWsave-cancel button:hover {
+    border: 2px solid white;
+    background: #36454F;
+    color: white;
+}
 /* --- Change Password --- */
 
 .PWsave-cancel {
     display: flex;
     justify-content: space-between;
-}
-
-.PWsave-cancel button {
-    width: 48%;
 }
 
 /* --- Change Password --- */

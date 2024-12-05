@@ -395,11 +395,11 @@ if (mysqli_stmt_execute($stmt)) {
 
                     <h5 onclick="window.location.href='changePW.php'">>Change Password here<</h5><br>
 
-                            <button type="button" class="btn" id="btn-update">Edit Info</button>
+                            <button type="button" class="btn" id="btn-update">EDIT Info</button>
 
                             <div class="save-cancel" id="save-cancel" style="display: none;">
-                                <button type="submit" id="btn-save">Save Changes</button>
-                                <button type="button" id="btn-cancel">Cancel</button>
+                                <button type="submit" id="btn-save">SAVE Changes</button>
+                                <button type="button" id="btn-cancel">CANCEL</button>
                             </div>
 
                 </form>

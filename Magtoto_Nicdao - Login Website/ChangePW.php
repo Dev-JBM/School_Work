@@ -172,25 +172,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h5 onclick="window.location.href='AccSettings.php'">>Return<</h5><br>
 
                         <div class="PWsave-cancel" id="save-cancel">
-                            <button type="submit" id="btn-save">Save Changes</button>
-                            <button type="button" id="btn-cancel">Cancel</button>
+                            <button type="submit" id="btn-save">SAVE Changes</button>
                         </div>
             </div>
         </form>
 
-
-        <script>
-            // Toggle password editing
-            document.getElementById('btn-update').addEventListener('click', function() {
-                document.getElementById('btn-update').style.display = 'none';
-                document.getElementById('save-cancel').style.display = 'block';
-            });
-
-            document.getElementById('btn-cancel').addEventListener('click', function() {
-                document.getElementById('save-cancel').style.display = 'none';
-                document.getElementById('btn-update').style.display = 'block';
-            });
-        </script>
     </div>
 
     <script>
