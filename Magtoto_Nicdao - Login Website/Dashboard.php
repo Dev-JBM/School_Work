@@ -13,21 +13,37 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-// --- FOR FETCHING PROFILE PIC --- //
 $username = $_SESSION['username']; // Get the logged-in username
 
-// Prepare the query to fetch the user's data
-$sql = "SELECT image FROM userlog WHERE username = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $username);
-$stmt->execute();
-$result = $stmt->get_result();
+// Fetch profile picture
+$sqlImage = "SELECT first_name, middle_name, last_name, image FROM userlog WHERE username = ?";
+$stmtImage = $conn->prepare($sqlImage);
+$stmtImage->bind_param("s", $username);
+$stmtImage->execute();
+$resultImage = $stmtImage->get_result();
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $imagePath = "user-Img/" . $row['image'];  // Set the image path based on the database value
+if ($resultImage->num_rows > 0) {
+    $rowImage = $resultImage->fetch_assoc();
+    $imagePath = "user-Img/" . $rowImage['image'];
 } else {
-    echo "No data found for the logged-in user.";
+    echo "No profile picture found for the logged-in user.";
+    exit();
+}
+
+// Fetch firstname, middlename, and lastname
+$sqlName = "SELECT first_name, middle_name, last_name FROM userlog WHERE username = ?";
+$stmtName = $conn->prepare($sqlName);
+$stmtName->bind_param("s", $username);
+$stmtName->execute();
+$resultName = $stmtName->get_result();
+
+if ($resultName->num_rows > 0) {
+    $rowName = $resultName->fetch_assoc();
+    $firstName = $rowName['first_name'];
+    $middleName = $rowName['middle_name'];
+    $lastName = $rowName['last_name'];
+} else {
+    echo "No name data found for the logged-in user.";
     exit();
 }
 
@@ -138,41 +154,52 @@ if (isset($_POST['delete'])) {
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <h4 class="user">Welcome,<br><?php echo htmlspecialchars($_SESSION['username']); ?>!</h4>
-            <a href="Dashboard.php"><img src="logo.png" class="logo"></a>
+<div class="container">
+    <nav>
+        <h4 class="user">Welcome,<br><?php echo htmlspecialchars($_SESSION['username']); ?>!</h4>
+        <a href="Dashboard.php"><img src="logo.png" class="logo"></a>
+
+        <!-- New container for fname and profilePic -->
+        <div class="right-section">
+            <h5 class="fname"><?php echo htmlspecialchars($firstName); ?></h5>
             <img src="<?php echo $imagePath; ?>" alt="Profile Picture" class="profilePic" onclick="togglemenu()">
+        </div>
 
-            <div class="sub-menu-wrap" id="sub-menu-wrap">
-                <div class="sub-menu">
-                    <div class="user-info">
-                        <img src="<?php echo $imagePath; ?>" class=" ">
-                        <h5><?php echo htmlspecialchars($_SESSION['username']); ?></h5>
-                    </div>
-                    <hr>
-
-                    <a href="ProfileInfo.php" class="sub-menu-link">
-                        <img src="userInfo.png">
-                        <p>Profile Info</p>
-                        <span>></span>
-                    </a>
-
-                    <a href="AccSettings.php" class="sub-menu-link">
-                        <img src="settings.png">
-                        <p>Account Settings</p>
-                        <span>></span>
-                    </a>
-
-                    <a href="#" class="sub-menu-link" onclick="showAlert()">
-                        <img src="logout.png">
-                        <p>Logout</p>
-                        <span>></span>
-                    </a>
+        <div class="sub-menu-wrap" id="sub-menu-wrap">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="<?php echo $imagePath; ?>" class=" ">
+                    <h5 class="fullName"><?php echo htmlspecialchars(trim(($firstName ?? '') . ' ' . ($middleName ?? '') . ' ' . ($lastName ?? ''))); ?></h5>
                 </div>
+                <hr>
+
+                <a href="Dashboard.php" class="sub-menu-link">
+                    <img src="home.png">
+                    <p>Home</p>
+                    <span>></span>
+                </a>
+
+                <a href="ProfileInfo.php" class="sub-menu-link">
+                    <img src="userInfo.png">
+                    <p>Profile Info</p>
+                    <span>></span>
+                </a>
+
+                <a href="AccSettings.php" class="sub-menu-link">
+                    <img src="settings.png">
+                    <p>Account Settings</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link" onclick="showAlert()">
+                    <img src="logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
     <script>
         let submenu = document.getElementById("sub-menu-wrap");
 
@@ -183,16 +210,32 @@ if (isset($_POST['delete'])) {
 
     <!-- UPLOAD FILES -->
     <div class="container mt-5">
-        <div class="upload" id="upload-area">
-            <h3>Upload a file</h3>
-            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST" enctype="multipart/form-data">
-                <input type="file" class="form-control" name="file" id="file" value="5242880" required hidden>
-                <label for="file" id="file-label">
-                    <h5>Drag or Choose a file</h5>
-                </label>
-                <button type="submit" class="btn btn-primary mt-3">Upload file</button>
-            </form>
-        </div>
+<div class="upload" id="upload-area">
+    <h3>Upload a file</h3>
+    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST" enctype="multipart/form-data">
+        <input type="file" class="form-control" name="file" id="file" value="5242880" required hidden>
+        <label for="file" id="file-label">
+            <h5>Drag or Choose a file</h5>
+        </label>
+        <p id="filename-display"></p> <!-- Placeholder for the filename -->
+        <button type="submit" class="btn btn-primary mt-3">Upload file</button>
+    </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fileInput = document.getElementById('file');
+        const filenameDisplay = document.getElementById('filename-display');
+
+        fileInput.addEventListener('change', function () {
+            if (fileInput.files.length > 0) {
+                // Display the name of the first selected file
+                filenameDisplay.textContent = `SELECTED FILE: ${fileInput.files[0].name}`;
+            } else {
+                filenameDisplay.textContent = ''; // Clear display if no file is selected
+            }
+        });
+    });
+</script>
         <div class="uploaded_files">
             <h3 class="mt-5">Uploaded Files</h3>
             <table class="table table-bordered table-striped">

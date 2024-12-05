@@ -14,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $dob = mysqli_real_escape_string($conn, $_POST['date_of_birth']);
 
-    // Validate password length
-    if (strlen($password) < 8) {
-        echo "<script>alert('Password must be at least 8 characters long.');</script>";
-    } 
-    // Validate passwords match
-    else if ($password !== $confirmPassword) {
+    // Validate password strength
+    $passwordPattern = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/';
+
+    if (!preg_match($passwordPattern, $password)) {
+        echo "<script>alert('Password must be at least 8 characters long and should contain at least one of all the following: UPPERCASE letter, LOWERCASE letter, NUMBER, and one SPECIAL character.');</script>";
+    } elseif ($password !== $confirmPassword) {
         echo "<script>alert('Passwords do not match.');</script>";
     } else {
         // Check for duplicate username
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (mysqli_query($conn, $sql)) {
                     echo "<script>alert('Registration Successful');</script>";
                 } else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    echo "<script>alert('Error: Unable to register. Please try again later.');</script>";
                 }
             }
         }
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="wrapper">
         <div class="logo-container">
-            <img src="logo.png" class="logo">
+            <img src="logo.png" class="enterlogo">
         </div>
         <form action="Register.php" method="post">
             <h1>Sign Up</h1>

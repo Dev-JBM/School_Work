@@ -36,6 +36,7 @@ body {
 }
 
 /* --- NAV BAR --- */
+/* Parent nav styles remain unchanged */
 nav {
     position: fixed;
     top: 0;
@@ -57,16 +58,38 @@ nav {
     justify-content: space-between;
 }
 
+/* Styles for the right-section container */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between fname and profilePic */
+}
+
+/* Specific styles for fname */
+.fname {
+    margin: 0;
+}
+
+/* Specific styles for profilePic */
+.profilePic {
+    border-radius: 50%;
+    /* Optional for rounded profile picture */
+    cursor: pointer;
+}
+
 .user {
     margin-left: 30px;
 }
 
 .logo {
     width: 120px;
-    margin-left: -10px;
+    position: relative;
+    left: 50px;
 }
 
 /* --- NAV BAR --- */
+
 
 /* --- OPTIONS --- */
 .profilePic {
@@ -94,6 +117,10 @@ nav {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.75s ease;
+}
+
+.sub-menu-wrap .fullName {
+    text-align: left;
 }
 
 .sub-menu-wrap.open-class {
@@ -206,6 +233,10 @@ nav {
     display: none;
 }
 
+.upload #filename-display {
+color: white;
+}
+
 /* --- UPLOAD FILES --- */
 /* ----- Dashboard.php only ----- */
 
@@ -252,14 +283,49 @@ nav {
     padding: 10px;
 }
 
+.edit-back {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.edit-back button {
+    font-size: 120%;
+}
+
 /* --- TABLE --- */
 /* ----- ProfileInfo.php only ----- */
 
 
 
 /* ----- AccSettings.php only ----- */
+.settings {
+    background: #36454F;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 30px;
+    animation: transitionIn 0.75s;
+}
+
+.settings h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
 #check {
     width: 20px;
+}
+
+/* --- Edit Profile Pic --- */
+
+.userImg {
+    position: relative;
+    top: 30px;
 }
 
 .userImg-pic {
@@ -315,13 +381,245 @@ nav {
 }
 
 .userImg p {
-text-align: center;
+    text-align: center;
 }
 
 .userImg-pic input::webkit-file-upload-button,
 .userImg-pic input[type=submit] {
     cursor: pointer;
 }
+
+/* --- Edit Profile Info --- */
+.wrapper {
+    position: relative;
+    bottom: 20px;
+    margin: -5px;
+    width: 500px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+form {
+    margin-top: 20px;
+}
+
+.wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.input-box #birthday {
+    width: 74%;
+    height: 40%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.wrapper h5 {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.wrapper h5:hover {
+    text-decoration: underline;
+}
+
+.wrapper button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.save-cancel {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.save-cancel button {
+    width: 48%;
+}
+
+.save-cancel #btn-cancel {
+    margin-left: 15px;
+}
+
+/* --- Change Password --- */
+.wrapperPW {
+    position: relative;
+    bottom: 20px;
+    margin: -5px;
+    width: 500px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+form {
+    margin-top: 20px;
+}
+
+.wrapperPW .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.wrapperPW .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.wrapperPW .input-box input::placeholder {
+    color: #fff;
+}
+
+.wrapperPW .input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapperPW .input-box #birthday {
+    width: 74%;
+    height: 40%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.wrapperPW h5 {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.wrapperPW h5:hover {
+    text-decoration: underline;
+}
+
+.wrapperPW button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.save-cancel {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.save-cancel button {
+    width: 48%;
+}
+
+.save-cancel #btn-cancel {
+    margin-left: 15px;
+}
+
 /* ----- AccSettings.php only ----- */
 
 

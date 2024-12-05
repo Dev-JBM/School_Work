@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="wrapper">
         <div class="logo-container">
-            <img src="logo.png" class="logo">
+            <img src="logo.png" class="enterlogo">
         </div>
         <form action="Login.php" method="post">
             <h1>Login</h1>
@@ -68,6 +68,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
+
+<h5 onclick="window.location.href='ForgotPass.php'">Forgot Password?</h5><br>
+
             <button type="submit" class="btn">Login</button>
             <div class="register-link">
                 <p>Not yet registered? <a href="Register.php">Sign Up</a></p>

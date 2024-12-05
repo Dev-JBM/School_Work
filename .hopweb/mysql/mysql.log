@@ -1096,3 +1096,367 @@ Version: '10.11.4-MariaDB'  socket: '/data/data/com.venter.hopweb/files/mysql/my
 2024-12-03 13:49:59 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
 2024-12-03 13:49:59 0 [ERROR] Do you already have another server running on port: 3306 ?
 2024-12-03 13:49:59 0 [ERROR] Aborting
+2024-12-03 16:12:47 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 14444
+2024-12-03 16:12:48 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-03 16:12:48 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-03 16:12:48 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-03 16:12:48 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-03 16:12:48 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-03 16:12:48 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-03 16:12:48 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-03 16:12:48 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-03 16:12:48 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-03 16:12:48 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-03 16:12:48 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-03 16:12:48 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-03 16:12:48 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-03 16:12:48 0 [Note] InnoDB: Buffer pool(s) load completed at 241203 16:12:48
+2024-12-03 16:12:48 0 [Note] Server socket created on IP: '::'.
+2024-12-03 16:12:48 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-03 16:12:48 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-03 16:12:48 0 [ERROR] Aborting
+2024-12-03 16:22:40 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 16816
+2024-12-03 16:22:40 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-03 16:22:40 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-03 16:22:40 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-03 16:22:40 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-03 16:22:40 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-03 16:22:40 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-03 16:22:40 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-03 16:22:40 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-03 16:22:40 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-03 16:22:40 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-03 16:22:40 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-03 16:22:40 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-03 16:22:40 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-03 16:22:40 0 [Note] InnoDB: Buffer pool(s) load completed at 241203 16:22:40
+2024-12-03 16:22:40 0 [Note] Server socket created on IP: '::'.
+2024-12-03 16:22:40 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-03 16:22:40 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-03 16:22:40 0 [ERROR] Aborting
+2024-12-03 20:20:18 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 25503
+2024-12-03 20:20:18 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-03 20:20:18 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-03 20:20:18 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-03 20:20:18 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-03 20:20:18 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-03 20:20:18 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-03 20:20:18 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-03 20:20:18 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-03 20:20:18 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-03 20:20:18 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-03 20:20:18 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-03 20:20:18 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-03 20:20:18 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-03 20:20:18 0 [Note] InnoDB: Buffer pool(s) load completed at 241203 20:20:18
+2024-12-03 20:20:18 0 [Note] Server socket created on IP: '::'.
+2024-12-03 20:20:18 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-03 20:20:18 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-03 20:20:18 0 [ERROR] Aborting
+2024-12-03 20:23:43 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 26942
+2024-12-03 20:23:43 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-03 20:23:43 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-03 20:23:43 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-03 20:23:43 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-03 20:23:43 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-03 20:23:43 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-03 20:23:43 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-03 20:23:44 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-03 20:23:44 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-03 20:23:44 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-03 20:23:44 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-03 20:23:44 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-03 20:23:44 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-03 20:23:44 0 [Note] InnoDB: Buffer pool(s) load completed at 241203 20:23:44
+2024-12-03 20:23:44 0 [Note] Server socket created on IP: '::'.
+2024-12-03 20:23:44 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-03 20:23:44 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-03 20:23:44 0 [ERROR] Aborting
+2024-12-03 20:23:52 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 27040
+2024-12-03 20:23:52 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-03 20:23:52 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-03 20:23:52 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-03 20:23:52 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-03 20:23:52 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-03 20:23:52 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-03 20:23:52 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-03 20:23:52 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-03 20:23:52 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-03 20:23:52 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-03 20:23:52 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-03 20:23:52 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-03 20:23:52 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-03 20:23:52 0 [Note] InnoDB: Buffer pool(s) load completed at 241203 20:23:52
+2024-12-03 20:23:52 0 [Note] Server socket created on IP: '::'.
+2024-12-03 20:23:52 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-03 20:23:52 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-03 20:23:52 0 [ERROR] Aborting
+2024-12-03 21:38:00 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 17025
+2024-12-03 21:38:00 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-03 21:38:00 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-03 21:38:00 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-03 21:38:00 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-03 21:38:00 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-03 21:38:00 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-03 21:38:00 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-03 21:38:00 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-03 21:38:00 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-03 21:38:00 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-03 21:38:00 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-03 21:38:00 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-03 21:38:00 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-03 21:38:00 0 [Note] InnoDB: Buffer pool(s) load completed at 241203 21:38:00
+2024-12-03 21:38:00 0 [Note] Server socket created on IP: '::'.
+2024-12-03 21:38:00 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-03 21:38:00 0 [Note] /data/app/~~KwEXWKRUf1pV6yR9Pl1yTg==/com.venter.hopweb-CZJISu5VxE23_IS0qLEeIw==/lib/arm64/libmariadbd-10.11.4.so: ready for connections.
+Version: '10.11.4-MariaDB'  socket: '/data/data/com.venter.hopweb/files/mysql/mysql.sock'  port: 3306  MariaDB Server
+2024-12-04  8:10:59 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 11312
+2024-12-04  8:10:59 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-04  8:10:59 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-04  8:10:59 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-04  8:10:59 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-04  8:10:59 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-04  8:10:59 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-04  8:10:59 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-04  8:10:59 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-04  8:10:59 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-04  8:10:59 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-04  8:10:59 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-04  8:10:59 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-04  8:10:59 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-04  8:10:59 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-04  8:10:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241204  8:10:59
+2024-12-04  8:10:59 0 [Note] Server socket created on IP: '::'.
+2024-12-04  8:10:59 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-04  8:10:59 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-04  8:10:59 0 [ERROR] Aborting
+2024-12-04 12:23:34 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 32267
+2024-12-04 12:23:35 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-04 12:23:35 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-04 12:23:35 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-04 12:23:35 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-04 12:23:35 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-04 12:23:35 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-04 12:23:35 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-04 12:23:35 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-04 12:23:35 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-04 12:23:35 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-04 12:23:35 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-04 12:23:35 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-04 12:23:35 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-04 12:23:35 0 [Note] InnoDB: Buffer pool(s) load completed at 241204 12:23:35
+2024-12-04 12:23:35 0 [Note] Server socket created on IP: '::'.
+2024-12-04 12:23:35 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-04 12:23:35 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-04 12:23:35 0 [ERROR] Aborting
+2024-12-04 16:46:13 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 10626
+2024-12-04 16:46:13 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-04 16:46:13 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-04 16:46:13 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-04 16:46:13 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-04 16:46:13 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-04 16:46:13 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-04 16:46:13 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-04 16:46:13 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-04 16:46:13 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-04 16:46:13 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-04 16:46:13 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-04 16:46:13 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-04 16:46:13 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-04 16:46:13 0 [Note] InnoDB: Buffer pool(s) load completed at 241204 16:46:13
+2024-12-04 16:46:13 0 [Note] Server socket created on IP: '::'.
+2024-12-04 16:46:13 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-04 16:46:13 0 [Note] /data/app/~~KwEXWKRUf1pV6yR9Pl1yTg==/com.venter.hopweb-CZJISu5VxE23_IS0qLEeIw==/lib/arm64/libmariadbd-10.11.4.so: ready for connections.
+Version: '10.11.4-MariaDB'  socket: '/data/data/com.venter.hopweb/files/mysql/mysql.sock'  port: 3306  MariaDB Server
+2024-12-04 17:04:31 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 17288
+2024-12-04 17:04:31 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-04 17:04:31 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-04 17:04:31 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-04 17:04:31 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-04 17:04:31 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-04 17:04:31 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-04 17:04:31 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-04 17:04:31 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-04 17:04:31 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-04 17:04:31 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-04 17:04:31 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-04 17:04:31 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-04 17:04:31 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-04 17:04:31 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-04 17:04:31 0 [Note] InnoDB: Buffer pool(s) load completed at 241204 17:04:31
+2024-12-04 17:04:31 0 [Note] Server socket created on IP: '::'.
+2024-12-04 17:04:31 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-04 17:04:31 0 [Note] /data/app/~~KwEXWKRUf1pV6yR9Pl1yTg==/com.venter.hopweb-CZJISu5VxE23_IS0qLEeIw==/lib/arm64/libmariadbd-10.11.4.so: ready for connections.
+Version: '10.11.4-MariaDB'  socket: '/data/data/com.venter.hopweb/files/mysql/mysql.sock'  port: 3306  MariaDB Server
+2024-12-05  3:59:58 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 26709
+2024-12-05  3:59:58 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05  3:59:58 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05  3:59:58 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05  3:59:58 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05  3:59:58 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05  3:59:58 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05  3:59:58 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05  3:59:58 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05  3:59:58 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-05  3:59:58 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05  3:59:58 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05  3:59:58 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05  3:59:58 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05  3:59:58 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05  3:59:58 0 [Note] InnoDB: Buffer pool(s) load completed at 241205  3:59:58
+2024-12-05  3:59:58 0 [Note] Server socket created on IP: '::'.
+2024-12-05  3:59:58 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05  3:59:58 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05  3:59:58 0 [ERROR] Aborting
+2024-12-05 10:04:29 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 9742
+2024-12-05 10:04:29 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 10:04:29 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 10:04:29 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 10:04:29 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 10:04:29 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 10:04:29 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 10:04:29 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 10:04:29 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 10:04:29 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 10:04:29 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 10:04:29 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 10:04:29 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 10:04:29 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 10:04:29 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 10:04:29
+2024-12-05 10:04:29 0 [Note] Server socket created on IP: '::'.
+2024-12-05 10:04:29 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 10:04:29 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 10:04:29 0 [ERROR] Aborting
+2024-12-05 12:11:57 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 31010
+2024-12-05 12:11:58 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 12:11:58 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 12:11:58 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 12:11:58 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 12:11:59 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 12:11:59 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 12:11:59 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 12:11:59 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 12:12:00 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 12:12:00 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 12:12:00 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 12:12:00 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 12:12:00 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 12:12:00 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 12:12:00
+2024-12-05 12:12:00 0 [Note] Server socket created on IP: '::'.
+2024-12-05 12:12:00 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 12:12:00 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 12:12:00 0 [ERROR] Aborting
+2024-12-05 14:21:24 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 27456
+2024-12-05 14:21:24 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 14:21:24 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 14:21:24 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 14:21:24 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 14:21:24 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 14:21:24 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 14:21:24 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 14:21:25 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 14:21:25 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 14:21:25 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 14:21:25 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 14:21:25 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 14:21:25 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 14:21:25 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 14:21:25
+2024-12-05 14:21:25 0 [Note] Server socket created on IP: '::'.
+2024-12-05 14:21:25 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 14:21:25 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 14:21:25 0 [ERROR] Aborting
+2024-12-05 17:35:00 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 17946
+2024-12-05 17:35:00 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 17:35:00 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 17:35:00 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 17:35:00 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 17:35:00 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 17:35:00 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 17:35:00 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 17:35:00 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 17:35:00 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 17:35:00 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 17:35:00 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 17:35:00 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 17:35:00 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 17:35:00 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 17:35:00
+2024-12-05 17:35:00 0 [Note] Server socket created on IP: '::'.
+2024-12-05 17:35:00 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 17:35:00 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 17:35:00 0 [ERROR] Aborting
+2024-12-05 18:11:18 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 29805
+2024-12-05 18:11:18 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 18:11:18 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 18:11:18 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 18:11:18 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 18:11:18 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 18:11:18 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 18:11:18 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 18:11:18 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 18:11:18 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 18:11:18 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 18:11:18 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 18:11:18 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 18:11:18 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 18:11:18 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 18:11:18
+2024-12-05 18:11:18 0 [Note] Server socket created on IP: '::'.
+2024-12-05 18:11:18 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 18:11:18 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 18:11:18 0 [ERROR] Aborting
+2024-12-05 18:12:30 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 30119
+2024-12-05 18:12:30 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 18:12:30 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 18:12:30 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 18:12:30 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 18:12:30 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 18:12:30 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 18:12:30 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 18:12:30 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 18:12:30 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 18:12:30 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 18:12:30 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 18:12:30 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 18:12:30 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 18:12:30 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 18:12:30
+2024-12-05 18:12:30 0 [Note] Server socket created on IP: '::'.
+2024-12-05 18:12:30 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 18:12:30 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 18:12:30 0 [ERROR] Aborting
+2024-12-05 20:54:34 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 4803
+2024-12-05 20:54:34 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 20:54:34 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 20:54:34 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 20:54:34 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 20:54:34 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 20:54:34 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 20:54:34 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 20:54:34 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 20:54:34 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 20:54:34 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 20:54:34 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 20:54:34 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 20:54:34 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 20:54:34 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 20:54:34
+2024-12-05 20:54:34 0 [Note] Server socket created on IP: '::'.
+2024-12-05 20:54:34 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 20:54:34 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 20:54:34 0 [ERROR] Aborting
+2024-12-05 21:05:39 0 [Note] Starting MariaDB 10.11.4-MariaDB source revision 4e2b93dffef2414a11ca5edc8d215f57ee5010e5 as process 7910
+2024-12-05 21:05:39 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2024-12-05 21:05:39 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-05 21:05:39 0 [Note] InnoDB: Using generic crc32 instructions
+2024-12-05 21:05:39 0 [Note] libmariadbd-10.11.4.so: O_TMPFILE is not supported on /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/tmp (disabling future attempts)
+2024-12-05 21:05:39 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-05 21:05:39 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-05 21:05:39 0 [Note] InnoDB: Buffered log writes (block size=512 bytes)
+2024-12-05 21:05:39 0 [Note] InnoDB: 128 rollback segments are active.
+2024-12-05 21:05:39 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-05 21:05:39 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-05 21:05:39 0 [Note] InnoDB: log sequence number 47062; transaction id 16
+2024-12-05 21:05:39 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-05 21:05:39 0 [Note] InnoDB: Loading buffer pool(s) from /storage/emulated/0/Venter/HopWeb/Projects/Finals_WebProg/.hopweb/mysql/data/ib_buffer_pool
+2024-12-05 21:05:39 0 [Note] InnoDB: Buffer pool(s) load completed at 241205 21:05:39
+2024-12-05 21:05:39 0 [Note] Server socket created on IP: '::'.
+2024-12-05 21:05:39 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 98: Address already in use
+2024-12-05 21:05:39 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-05 21:05:39 0 [ERROR] Aborting

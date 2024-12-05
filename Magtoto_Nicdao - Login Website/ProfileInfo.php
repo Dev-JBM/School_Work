@@ -29,6 +29,23 @@ if ($result->num_rows > 0) {
     exit();
 }
 
+// Fetch first_name, middle_name, and last_name
+$sqlName = "SELECT first_name, middle_name, last_name FROM userlog WHERE username = ?";
+$stmtName = $conn->prepare($sqlName);
+$stmtName->bind_param("s", $username);
+$stmtName->execute();
+$resultName = $stmtName->get_result();
+
+if ($resultName->num_rows > 0) {
+    $rowName = $resultName->fetch_assoc();
+    $firstName = $rowName['first_name'];
+    $middleName = $rowName['middle_name'];
+    $lastName = $rowName['last_name'];
+} else {
+    echo "No name data found for the logged-in user.";
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -43,41 +60,51 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <h4 class="user">Welcome,<br><?php echo htmlspecialchars($_SESSION['username']); ?>!</h4>
-            <a href="Dashboard.php"><img src="logo.png" class="logo"></a>
+<div class="container">
+    <nav>
+        <h4 class="user">Welcome,<br><?php echo htmlspecialchars($_SESSION['username']); ?>!</h4>
+        <a href="Dashboard.php"><img src="logo.png" class="logo"></a>
+
+        <div class="right-section">
+            <h5 class="fname"><?php echo htmlspecialchars($firstName); ?></h5>
             <img src="<?php echo $imagePath; ?>" alt="Profile Picture" class="profilePic" onclick="togglemenu()">
+        </div>
 
-            <div class="sub-menu-wrap" id="sub-menu-wrap">
-                <div class="sub-menu">
-                    <div class="user-info">
-                        <img src="<?php echo $imagePath; ?>" class=" ">
-                        <h5><?php echo htmlspecialchars($_SESSION['username']); ?></h5>
-                    </div>
-                    <hr>
-
-                    <a href="ProfileInfo.php" class="sub-menu-link">
-                        <img src="userInfo.png">
-                        <p>Profile Info</p>
-                        <span>></span>
-                    </a>
-
-                    <a href="AccSettings.php" class="sub-menu-link">
-                        <img src="settings.png">
-                        <p>Account Settings</p>
-                        <span>></span>
-                    </a>
-
-                    <a href="#" class="sub-menu-link" onclick="showAlert()">
-                        <img src="logout.png">
-                        <p>Logout</p>
-                        <span>></span>
-                    </a>
+        <div class="sub-menu-wrap" id="sub-menu-wrap">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="<?php echo $imagePath; ?>" class=" ">
+                    <h5 class="fullName"><?php echo htmlspecialchars(trim(($firstName ?? '') . ' ' . ($middleName ?? '') . ' ' . ($lastName ?? ''))); ?></h5>
                 </div>
+                <hr>
+
+                <a href="Dashboard.php" class="sub-menu-link">
+                    <img src="home.png">
+                    <p>Home</p>
+                    <span>></span>
+                </a>
+
+                <a href="ProfileInfo.php" class="sub-menu-link">
+                    <img src="userInfo.png">
+                    <p>Profile Info</p>
+                    <span>></span>
+                </a>
+
+                <a href="AccSettings.php" class="sub-menu-link">
+                    <img src="settings.png">
+                    <p>Account Settings</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link" onclick="showAlert()">
+                    <img src="logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
     <script>
         let submenu = document.getElementById("sub-menu-wrap");
 
@@ -120,7 +147,11 @@ if ($result->num_rows > 0) {
                 <td class="fetched-data"><?php echo htmlspecialchars($row['date_of_birth']); ?></td>
             </tr>
         </table>
-            <button><a href="AccSettings.php">Edit</a></button>
+          <div class="edit-back">
+            <button onclick="window.location.href='AccSettings.php'" >Edit</a></button>
+                <a href="Dashboard.php" class="sub-menu-link">
+                <img src="back.png">
+          </div>
     </div>
 
     <!-- LOGOUT -->
