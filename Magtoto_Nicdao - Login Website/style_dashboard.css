@@ -493,7 +493,6 @@ form {
 }
 
 .save-cancel {
-    position: relative;
     display: flex;
     justify-content: space-between;
     display: none;
@@ -504,121 +503,23 @@ form {
 }
 
 .save-cancel #btn-cancel {
-    margin-left: 15px;
+    position: relative;
+left: 15px;
+}
+
+
+/* --- Change Password --- */
+
+.PWsave-cancel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.PWsave-cancel button {
+    width: 48%;
 }
 
 /* --- Change Password --- */
-.wrapperPW {
-    position: relative;
-    bottom: 20px;
-    margin: -5px;
-    width: 500px;
-    border: 2px solid rgba(255, 255, 255, .2);
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px 10px;
-    animation: transitionIn 0.75s;
-}
-
-@keyframes transitionIn {
-    0% {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-
-    100% {
-        opacity: 1;
-        transform: rotateX(0);
-    }
-}
-
-form {
-    margin-top: 20px;
-}
-
-.wrapperPW .input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-}
-
-.wrapperPW .input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
-}
-
-.wrapperPW .input-box input::placeholder {
-    color: #fff;
-}
-
-.wrapperPW .input-box i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-}
-
-.wrapperPW .input-box #birthday {
-    width: 74%;
-    height: 40%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
-}
-
-.wrapperPW h5 {
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-}
-
-.wrapperPW h5:hover {
-    text-decoration: underline;
-}
-
-.wrapperPW button {
-    width: 100%;
-    height: 45px;
-    background: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-}
-
-.save-cancel {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    display: none;
-}
-
-.save-cancel button {
-    width: 48%;
-}
-
-.save-cancel #btn-cancel {
-    margin-left: 15px;
-}
 
 /* ----- AccSettings.php only ----- */
 

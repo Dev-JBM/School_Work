@@ -156,24 +156,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="wrapper">
                 <div class="input-box">
                     <label for="old_password">Enter Old Password:</label>
-                    <input type="password" id="old_password" name="old_password" disabled required>
+                    <input type="password" id="old_password" name="old_password" required>
                 </div>
 
                 <div class="input-box">
                     <label for="new_password">New Password:</label>
-                    <input type="password" id="new_password" name="new_password" disabled required>
+                    <input type="password" id="new_password" name="new_password" required>
                 </div>
 
                 <div class="input-box">
                     <label for="confirm_password">Confirm Password:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" disabled required>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
                 </div><br>
 
                 <h5 onclick="window.location.href='AccSettings.php'">>Return<</h5><br>
 
-                        <button type="button" class="btn" id="btn-update">Edit Info</button>
-
-                        <div class="save-cancel" id="save-cancel" style="display: none;">
+                        <div class="PWsave-cancel" id="save-cancel">
                             <button type="submit" id="btn-save">Save Changes</button>
                             <button type="button" id="btn-cancel">Cancel</button>
                         </div>
@@ -186,20 +184,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             document.getElementById('btn-update').addEventListener('click', function() {
                 document.getElementById('btn-update').style.display = 'none';
                 document.getElementById('save-cancel').style.display = 'block';
-                var inputs = document.querySelectorAll('input[type="password"]');
-                inputs.forEach(function(input) {
-                    input.disabled = false;
-                });
             });
 
             document.getElementById('btn-cancel').addEventListener('click', function() {
                 document.getElementById('save-cancel').style.display = 'none';
                 document.getElementById('btn-update').style.display = 'block';
-                var inputs = document.querySelectorAll('input[type="password"]');
-                inputs.forEach(function(input) {
-                    input.disabled = true;
-                    input.value = ''; // Reset fields
-                });
             });
         </script>
     </div>
